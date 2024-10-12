@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Map;
 
-public class Country {
+public class Country implements GreenhouseGasEmitter{
     private String name;
     private Map<Integer, Emission> yearEmissions;
 

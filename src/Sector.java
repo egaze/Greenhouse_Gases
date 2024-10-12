@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class Sector{
+public class Sector implements GreenhouseGasEmitter{
     private String name;
     private Map<Integer, Double> yearEmissionsMap;
 
@@ -34,7 +34,7 @@ public class Sector{
     }
 
 
-    public static Sector sectorWithBiggestChangeInEmissions(List<Sector> sectors, int
+    public static Sector highestChangeInEmissions(List<Sector> sectors, int
             startYear, int endYear) {
         double highestDifference = 0;
         Sector sectorHighestChange = null;

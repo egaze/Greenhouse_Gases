@@ -34,12 +34,12 @@ public class Main {
         /* Which sector had the
         highest change in greenhouse gas emissions between 1988 and 2012?
         */
-        double powerIndustryEmission1988 = Sector.sectorWithBiggestChangeInEmissions(sectors, 1988, 2012).getEmissions().get(1988);
-        double powerIndustryEmission2012 = Sector.sectorWithBiggestChangeInEmissions(sectors, 1988, 2012).getEmissions().get(2012);
+        double powerIndustryEmission1988 = Sector.highestChangeInEmissions(sectors, 1988, 2012).getEmissions().get(1988);
+        double powerIndustryEmission2012 = Sector.highestChangeInEmissions(sectors, 1988, 2012).getEmissions().get(2012);
 
         System.out.print("\nSector with the highest change in greenhouse gas emission between 1988 and 2012: ");
         double powerIndustryChange = powerIndustryEmission2012 - powerIndustryEmission1988;
-        System.out.print("\n" + Sector.sectorWithBiggestChangeInEmissions(sectors, 1988, 2012).getName() + " : ");
+        System.out.print("\n" + Sector.highestChangeInEmissions(sectors, 1988, 2012).getName() + " : ");
         System.out.print(powerIndustryChange + " kilotons" + "\n");
     }
 
